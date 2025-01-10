@@ -32,17 +32,7 @@ header .tagline {
     margin-top: 10px;
 }
 
-/* Section */
-.section {
-    padding: 40px 0;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Introducción */
+/* Sección de Introducción */
 #introduccion h2 {
     font-size: 28px;
     color: #333;
@@ -55,7 +45,7 @@ header .tagline {
     color: #666;
 }
 
-/* Videos */
+/* Sección de Videos */
 #videos h2 {
     font-size: 28px;
     color: #333;
@@ -65,26 +55,39 @@ header .tagline {
 
 .video-container {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
+    justify-content: space-around; /* Espacio entre los videos */
+    gap: 30px; /* Distancia entre cada video */
+    flex-wrap: wrap; /* Para que los videos se acomoden bien en pantallas pequeñas */
+    margin-top: 20px;
 }
 
 .video-item {
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    width: 30%; /* Cada video ocupa el 30% del contenedor */
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     overflow: hidden;
-    background-color: white;
+    text-align: center;
     margin-bottom: 20px;
 }
 
 video {
     width: 100%;
+    height: auto;
     border-radius: 8px;
 }
 
-/* Documentos */
+.video-description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+
+/* Sección de Documentos */
 #documentos h2 {
     font-size: 28px;
     color: #333;
@@ -129,7 +132,11 @@ footer p {
     }
 
     .video-item {
-        width: 100%;
+        width: 100%; /* Los videos ocuparán el 100% del espacio disponible en pantallas pequeñas */
+    }
+
+    video {
+        max-width: 100%; /* Aseguramos que los videos no excedan el tamaño del contenedor */
     }
 
     header h1 {
